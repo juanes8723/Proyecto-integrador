@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+/* este bloque de codigo le da el color azul al fondo de la pagina */
+body{
+    margin: 10px;
+    padding: 10px;
+    background-color: lightskyblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* este bloque de codigo es para poner el texto del header horizontalmente
+y darle un fondo verde */
+.header_nav ul{
+    display: flex;
+    font-size: 32px;
+    font-weight: 800;
+    background-color: green;
+    justify-content: space-between;
+}
+/*este bloque de codigo es para darle un fondo verde solo al header */
+header{
+    background-color:yellowgreen;
+}
+.header_nav ul li{
+    list-style: none;
+    margin: 10px;
+}
+/* este bloque de codigo es para quitar los puntos de las listas */
+.header_nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+/* este codigo es para ajustar el tamaño de la imagen al ancho de la pantalla */
+img{
+    width: 100%;
+    height: 100%;
+
+}
+/* este bloque de codigo le cambia el tamaño a la letra de la etiqueta h1 del header
+ y se le pone una fuente y sombreado */
+.header_nav h1{
+    font-style: oblique;
+    font-size: 64px;
+    font-weight: 2000;
+    color: rgba(34, 2, 2, 0.363);
+}
+.table_container{
+    border-collapse: collapse;
+    width: 100px;
+    font-family: sans-serif;
+    display:table-caption;
+    justify-content: left;
+}
+
+.button_container:hover{
+    background-color: green;
+    font-weight: 900;
+    
+}
+
+.main-container {
+    display:flex;
+    justify-content: right;
+}
+.asaid_container{
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;/*alinea el texto en el centro*/
+    line-height: 60px;/*separa las lineas entre el texto*/
+    width: 300px;
+    height: 50%;
+    
+}
+.article_container{
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;/*alinea el texto en el centro*/
+    line-height: 40px;/*separa las lineas entre el texto*/
+    width: 74%;
+    height: 50%;
+
+    
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+@media (max-width: 768px) {
+    .header_nav h1{
+    font-style: slanted;
+    font-size: 32px;
+    font-weight: 1000;
+    color: rgba(56, 8, 8, 0.363);
+    }
+    img{
+    width: 50%;
+    height: 50%;
+
+    }
+    .header_nav ul{
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgb(14, 117, 14);
+    justify-content: space-between;
+    }
+   
+}
