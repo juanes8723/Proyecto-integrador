@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;/*resetea los bordes*/
+}
+
+body{
+    margin: 10px;
+    padding: 10px;
+    font-family: tahoma, sans-serif;
+}
+body{
+    background:linear-gradient(#3498db,#9b59c6);
+}
+/*este bloque de codigo es para darle un fondo verde solo al header */
+header{
+    width: 100%;
+    background-color:yellowgreen;
+}
+/* este bloque de codigo le cambia el tamaño a la letra de la etiqueta h1 del header
+ y se le pone una fuente y sombreado */
+.header_nav h1{
+    font-style: oblique;
+    font-size: 5rem;
+    font-weight: 2000;
+    color: rgba(34, 2, 2, 0.363);
+}
+
+/* este bloque de codigo es para poner el texto del header horizontalmente
+y darle un fondo verde */
+.header_nav ul{
+    display: flex;
+    font-size: 2rem;
+    font-weight: 800;
+    background-color: green;
+    justify-content: space-between;
+}
+/* este bloque de codigo es para quitar los puntos de las listas
+ y darle un margen a cada elemento de la lista */
+.header_nav ul li{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;  
+}
+/*le quita la decoracion a las etiquetas de navegacion de nav
+y las pone de color negro*/ 
+.header_nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+/* este codigo es para ajustar el tamaño de la imagen al ancho de la pantalla */
+img{
+    width: 100%;
+    height: 100%;
+}
+.container_principal{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* MODIFICACIÓN: se usa flexbox para ubicar los bloques en una misma fila */
+/* y para que ambos queden con la misma altura gracias a align-items: stretch */
+.main_container{
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+/* MODIFICACIÓN: ambos contenedores se comportan como columnas para que el contenido
+   se acomode de forma consistente dentro del bloque */
+.container_primero,
+.container_segundo{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MODIFICACIÓN: primer bloque con un ancho del 30% */
+.container_primero{
+    width: 30%;
+    background:radial-gradient(at left,#35c456,#3499ab);
+}
+
+/* MODIFICACIÓN: segundo bloque con un ancho del 70% */
+.container_segundo{
+    width: 70%;
+    background:radial-gradient(at right,#3499ab,#35c456);
+}
+.container_primero__etiqueta{
+    color: chocolate;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+.container_primero__etiqueta::before{
+    content: '!';
+    font-size: 2px;
+
+}
+
+.container_primero__parrafo{
+    font-size: 25px;
+    font-style:normal;
+}
+.container_segundo__etiqueta{
+    color: chocolate;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+.container_segundo__parrafo{
+    font-size: 25px;
+    font-style:normal;
+}
+.footer_container{
+    display: flex;
+  
+}
+.footer_ul{
+    display: flex;
+    font-size: 32px;
+    font-weight: 400;
+    justify-content: space-between;
+    min-width: 100%;
+}
+.footer_ul li{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;  
+}
+
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+@media (max-width: 768px) {
+    .header{
+    width: 100%;
+    }
+    .header_nav h1{
+    width: 90%;    
+    font-style: slanted;
+    font-size: 3rem;
+    font-weight: 1000;
+    color: rgba(56, 8, 8, 0.363);
+    }
+    img{
+    width: 100%;
+    height: 100%;
+
+    }
+    .header_nav ul{
+    width: 90%;    
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: rgb(14, 117, 14);
+    justify-content: space-between;
+    }
+   
+}
+@media (max-width: 576px) {
+    .header_nav h1{
+    font-style: slanted;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgba(56, 8, 8, 0.363);
+    }
+    img{
+    width: 100%;
+    height: 100%;
+
+    }
+    .header_nav ul{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+    font-weight: 400;
+    background-color: rgb(14, 117, 14);
+    justify-content: space-between;
+    }
+   
+}
